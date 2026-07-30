@@ -23,8 +23,9 @@
   --grad-primary:  linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
   --grad-radial:   radial-gradient(circle at center, rgba(139,92,246,0.35), transparent 70%);
 
-  --font-display:  'Poppins', sans-serif;
-  --font-mono:     'JetBrains Mono', monospace;
+  /* Perbaikan 3: Font Fallback */
+  --font-display:  'Poppins', system-ui, -apple-system, sans-serif;
+  --font-mono:     'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
   --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
   --container:     1180px;
@@ -59,7 +60,9 @@ body{
 a{ color:inherit; text-decoration:none; }
 ul{ list-style:none; }
 button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
-img{ max-width:100%; display:block; }
+
+/* Perbaikan 1: Penambahan height: auto pada img */
+img{ max-width:100%; height:auto; display:block; }
 
 /* Scrollbar */
 ::-webkit-scrollbar{ width:8px; }
@@ -138,10 +141,12 @@ img{ max-width:100%; display:block; }
 @keyframes loaderFill{ to{ width:100%; } }
 
 /* ---------- Custom cursor ---------- */
+/* Perbaikan 2: Optimasi Kursor menggunakan CSS Variables untuk performa (60fps) */
 .cursor-dot, .cursor-ring{
   position:fixed; top:0; left:0; pointer-events:none; z-index:9998;
   border-radius:50%;
-  transform:translate(-50%,-50%);
+  /* Fallback posisi awal di tengah layar */
+  transform:translate(calc(var(--x, 50vw) - 50%), calc(var(--y, 50vh) - 50%));
   will-change:transform;
 }
 .cursor-dot{ width:6px; height:6px; background:var(--purple-soft); }
@@ -168,6 +173,11 @@ img{ max-width:100%; display:block; }
   position:absolute; border-radius:50%;
   filter:blur(90px);
   pointer-events:none; z-index:0;
+  will-change: filter; /* Optimasi performa render */
+}
+/* Perbaikan 4: Penyesuaian blur glow-orb untuk device mobile agar tidak lag */
+@media (max-width:767px){
+  .glow-orb { filter:blur(60px); }
 }
 
 /* ---------- Navbar ---------- */
@@ -233,7 +243,8 @@ img{ max-width:100%; display:block; }
     border-left:1px solid var(--border);
   }
   .nav-links.open{ transform:translateX(0); }
-  .nav-links a{ font-size:1.1rem; }
+  /* Perbaikan 5: Menambah padding top-bottom agar link lebih mudah ditap jari (aksesibilitas) */
+  .nav-links a{ font-size:1.1rem; padding: .8rem 0; width: 100%; text-align: center; } 
   .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
   .nav-toggle.open span:nth-child(2){ opacity:0; }
   .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
@@ -276,7 +287,7 @@ img{ max-width:100%; display:block; }
 /* ---------- Hero ---------- */
 .hero{
   min-height:100vh;
-  min-height:100svh; /* adapts to mobile browsers where the address bar changes viewport height */
+  min-height:100svh;
   display:flex; align-items:center;
   position:relative;
   padding-top:6rem;
