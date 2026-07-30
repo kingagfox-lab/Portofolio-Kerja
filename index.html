@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agung Setiyadi Widyanto — High School Software Developer</title>
+<meta name="description" content="Portfolio of Agung Setiyadi Widyanto, a high school software developer at SMKN 6 Surakarta (PPLG) building web apps, UI, and future-ready software.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind (utility helpers) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { ink:'#050505', purple:'#8B5CF6', neon:'#3B82F6' } } } }
+</script>
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@1.27.0/dist/umd/lucide.js" defer></script>
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark">agung<span class="blip">.</span>dev</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- ambient glow orbs -->
+<div class="glow-orb" style="width:480px;height:480px;top:-120px;left:-140px;background:#8B5CF6;opacity:.28;"></div>
+<div class="glow-orb" style="width:420px;height:420px;bottom:-100px;right:-120px;background:#3B82F6;opacity:.24;"></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="index.html#about-preview">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html#experience">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">
+      <i data-lucide="send" style="width:16px;height:16px;"></i> Hire Me
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-greet mono" data-aos="fade-up">// hello, world 👋</p>
+          <h1 class="hero-name" data-aos="fade-up" data-aos-delay="80">
+            Agung Setiyadi<br><span class="accent">Widyanto</span>
+          </h1>
+          <p class="hero-role mono" data-aos="fade-up" data-aos-delay="140">
+            <span id="type-target" data-words='["Web Developer","Front-End Developer","UI Designer","Future Software Engineer"]'></span><span class="type-cursor">|</span>
+          </p>
+          <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">
+            High school developer at <strong style="color:#fff">SMKN 6 Surakarta</strong>, majoring in Software &amp; Game Development (PPLG). I design and build clean, functional web experiences while learning the craft of real-world software engineering, one project at a time.
+          </p>
+          <div class="hero-actions" data-aos="fade-up" data-aos-delay="260">
+            <a href="assets/Agung_Setiyadi_Widyanto_CV.pdf" class="btn btn-primary" download>
+              <i data-lucide="download" style="width:17px;height:17px;"></i> Download CV
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <i data-lucide="message-circle" style="width:17px;height:17px;"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero-socials" data-aos="fade-up" data-aos-delay="320">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+            <a href="mailto:agung.setiyadi.dev@gmail.com" class="social-btn" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px;"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+          <div class="avatar-frame">
+            <div class="avatar-inner">
+              <img src="assets/images/avatar.svg" alt="Portrait placeholder of Agung Setiyadi Widyanto">
+            </div>
+            <div class="avatar-badge glass"><span class="dot"></span> Open to Internships</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span>SCROLL</span>
+        <span class="line"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="section" style="padding-top:0;" id="stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-card glass" data-aos="fade-up">
+          <div class="stat-num"><span data-counter="14" data-suffix="+">0</span></div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card glass" data-aos="fade-up" data-aos-delay="80">
+          <div class="stat-num"><span data-counter="2" data-suffix="+">0</span></div>
+          <div class="stat-label">Years Learning to Code</div>
+        </div>
+        <div class="stat-card glass" data-aos="fade-up" data-aos-delay="160">
+          <div class="stat-num"><span data-counter="10" data-suffix="+">0</span></div>
+          <div class="stat-label">Technologies Explored</div>
+        </div>
+        <div class="stat-card glass" data-aos="fade-up" data-aos-delay="240">
+          <div class="stat-num"><span data-counter="5" data-suffix="+">0</span></div>
+          <div class="stat-label">Competitions Joined</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT PREVIEW ================= -->
+  <section class="section" id="about-preview">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo glass" data-aos="fade-right">
+          <div class="about-photo-inner">
+            <img src="assets/images/avatar.svg" alt="Illustrated portrait placeholder of Agung">
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <p class="eyebrow">// 01_about-me</p>
+          <h2 class="section-title">Turning curiosity into <span class="accent">working code.</span></h2>
+          <div class="about-text mt-2">
+            <p>I'm Agung Setiyadi Widyanto, a high school student at <strong>SMKN 6 Surakarta</strong> majoring in <strong>PPLG (Software and Game Development)</strong>. What started as curiosity about how websites work turned into a genuine passion for building things with code.</p>
+            <p>I enjoy the process of learning programming, solving problems logically, and watching an idea grow from a blank file into a working product. Outside of class, I practice web development, contribute to school projects, and collaborate with teammates who push me to improve.</p>
+          </div>
+          <a href="about.html" class="btn btn-outline mt-2">
+            More About Me <i data-lucide="arrow-up-right" style="width:16px;height:16px;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PROJECTS ================= -->
+  <section class="section" id="featured-projects">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">// 02_selected-work</p>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-sub">A few things I've designed, built, and shipped while learning full-stack development.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="project-card glass" data-aos="fade-up">
+          <div class="project-thumb"><img src="assets/images/proj-phone-store.svg" alt="Phone Store Website preview"></div>
+          <div class="project-body">
+            <h3 class="project-title">Phone Store Website</h3>
+            <p class="project-desc">An e-commerce concept site for browsing and comparing smartphones with a clean product catalog.</p>
+            <div class="tag-row"><span class="tag">HTML</span><span class="tag">Tailwind</span><span class="tag">JavaScript</span></div>
+          </div>
+        </div>
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-thumb"><img src="assets/images/proj-thai-tea.svg" alt="Thai Tea Cheese Website preview"></div>
+          <div class="project-body">
+            <h3 class="project-title">Thai Tea Cheese Website</h3>
+            <p class="project-desc">A vibrant landing page for a beverage brand, built to showcase products and drive online orders.</p>
+            <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </div>
+        </div>
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-thumb"><img src="assets/images/proj-task-app.svg" alt="Task Management App preview"></div>
+          <div class="project-body">
+            <h3 class="project-title">Task Management App</h3>
+            <p class="project-desc">A productivity app to create, track, and organize daily tasks with local data persistence.</p>
+            <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-2" data-aos="fade-up">
+        <a href="projects.html" class="btn btn-primary">View All Projects <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section" id="cta">
+    <div class="container">
+      <div class="glass text-center" style="padding:3.5rem 2rem;" data-aos="zoom-in">
+        <p class="eyebrow" style="justify-content:center;">// let's build something</p>
+        <h2 class="section-title">Have an idea? Let's bring it <span class="accent">to life.</span></h2>
+        <p class="section-sub" style="margin-inline:auto;">I'm currently open to internships, collaborations, and small freelance projects.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="contact.html" class="btn btn-primary">Get In Touch <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+        <p>High school software developer at SMKN 6 Surakarta, building web experiences and learning to become a professional software engineer.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:agung.setiyadi.dev@gmail.com">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Agung Setiyadi Widyanto. All rights reserved.</p>
+      <p>Designed &amp; Developed by Agung Setiyadi Widyanto</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up" style="width:18px;height:18px;"></i></button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

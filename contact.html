@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Agung Setiyadi Widyanto</title>
+<meta name="description" content="Get in touch with Agung Setiyadi Widyanto for internships, collaborations, or freelance web development projects.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://unpkg.com/lucide@1.27.0/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark">agung<span class="blip">.</span>dev</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<canvas id="particle-canvas"></canvas>
+<div class="glow-orb" style="width:420px;height:420px;bottom:-100px;left:-120px;background:#3B82F6;opacity:.24;"></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html#experience">Experience</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta"><i data-lucide="send" style="width:16px;height:16px;"></i> Hire Me</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="page-kicker mono" data-aos="fade-up">// 04_contact</p>
+      <h1 class="page-title" data-aos="fade-up" data-aos-delay="80">Let's build something together.</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container contact-grid">
+
+      <div data-aos="fade-right">
+        <div class="glass" style="padding:2.2rem;">
+          <h2 style="font-size:1.4rem; font-weight:600; margin-bottom:1.6rem;">Send a message</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message <i data-lucide="send" style="width:16px;height:16px;"></i>
+            </button>
+            <p id="form-status" class="form-status"></p>
+          </form>
+        </div>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="glass contact-info-item" style="margin-bottom:1rem;">
+          <div class="contact-info-icon"><i data-lucide="mail" style="width:19px;height:19px;"></i></div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">Kingagfox@gmail.com</div>
+          </div>
+        </div>
+        <div class="glass contact-info-item" style="margin-bottom:1rem;">
+          <div class="contact-info-icon"><i data-lucide="phone" style="width:19px;height:19px;"></i></div>
+          <div>
+            <div class="contact-info-label">Phone / WhatsApp</div>
+            <div class="contact-info-value">+62 852-9845-9963 (placeholder)</div>
+          </div>
+        </div>
+        <div class="glass contact-info-item" style="margin-bottom:1rem;">
+          <div class="contact-info-icon"><i data-lucide="map-pin" style="width:19px;height:19px;"></i></div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Surakarta, Central Java, Indonesia</div>
+          </div>
+        </div>
+        <div class="glass contact-info-item">
+          <div class="contact-info-icon"><i data-lucide="share-2" style="width:19px;height:19px;"></i></div>
+          <div>
+            <div class="contact-info-label">Social</div>
+            <div class="hero-socials" style="margin-top:.6rem;">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Surakarta,+Central+Java,+Indonesia&output=embed"
+            width="100%" height="100%" style="border:0; filter:grayscale(1) invert(0.92) contrast(0.9);"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Map location placeholder — Surakarta, Central Java">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+        <p>High school software developer at SMKN 6 Surakarta, building web experiences and learning to become a professional software engineer.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:agung.setiyadi.dev@gmail.com">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Agung Setiyadi Widyanto. All rights reserved.</p>
+      <p>Designed &amp; Developed by Agung Setiyadi Widyanto</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up" style="width:18px;height:18px;"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Agung Setiyadi Widyanto</title>
+<meta name="description" content="Technical skills of Agung Setiyadi Widyanto: HTML, CSS, Tailwind, JavaScript, PHP, MySQL, Python, C++, Git, UI/UX and more.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://unpkg.com/lucide@1.27.0/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-mark">agung<span class="blip">.</span>dev</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<canvas id="particle-canvas"></canvas>
+<div class="glow-orb" style="width:420px;height:420px;top:-100px;left:-120px;background:#3B82F6;opacity:.24;"></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html#experience">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta"><i data-lucide="send" style="width:16px;height:16px;"></i> Hire Me</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="page-kicker mono" data-aos="fade-up">// 02_skills</p>
+      <h1 class="page-title" data-aos="fade-up" data-aos-delay="80">Tools &amp; technologies I work with.</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+
+      <div class="skills-tabs" data-aos="fade-up">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="frontend">Front-End</button>
+        <button class="tab-btn" data-tab="backend">Back-End</button>
+        <button class="tab-btn" data-tab="tools">Tools &amp; Design</button>
+        <button class="tab-btn" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <!-- Front-End -->
+      <div data-skill-group="frontend" data-aos="fade-up">
+        <div class="skill-cat-title">// front-end</div>
+        <div class="grid-3">
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="file-code-2" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">HTML</div>
+              <div class="skill-level">95%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="95"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="palette" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">CSS</div>
+              <div class="skill-level">90%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="wind" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Tailwind CSS</div>
+              <div class="skill-level">88%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="braces" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-level">82%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="layout-template" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Responsive Design</div>
+              <div class="skill-level">90%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back-End -->
+      <div data-skill-group="backend" data-aos="fade-up">
+        <div class="skill-cat-title">// back-end</div>
+        <div class="grid-3">
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="server" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">PHP</div>
+              <div class="skill-level">70%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="database" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">MySQL</div>
+              <div class="skill-level">72%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="72"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="terminal" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Python</div>
+              <div class="skill-level">68%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="68"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="cpu" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">C++</div>
+              <div class="skill-level">60%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="60"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Design -->
+      <div data-skill-group="tools" data-aos="fade-up">
+        <div class="skill-cat-title">// tools &amp; design</div>
+        <div class="grid-3">
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="git-branch" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Git</div>
+              <div class="skill-level">80%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+              <div class="skill-name">GitHub</div>
+              <div class="skill-level">80%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="pen-tool" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">UI/UX Design</div>
+              <div class="skill-level">78%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft skills -->
+      <div data-skill-group="soft" data-aos="fade-up">
+        <div class="skill-cat-title">// soft skills</div>
+        <div class="grid-3">
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="puzzle" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Problem Solving</div>
+              <div class="skill-level">92%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-top">
+              <div class="skill-icon-wrap"><i data-lucide="users" style="width:19px;height:19px;"></i></div>
+              <div class="skill-name">Team Collaboration</div>
+              <div class="skill-level">88%</div>
+            </div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+        <p>High school software developer at SMKN 6 Surakarta, building web experiences and learning to become a professional software engineer.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:agung.setiyadi.dev@gmail.com">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Agung Setiyadi Widyanto. All rights reserved.</p>
+      <p>Designed &amp; Developed by Agung Setiyadi Widyanto</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up" style="width:18px;height:18px;"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
