@@ -545,6 +545,7 @@ img{ max-width:100%; height:auto; display:block; }
   background:var(--orange); color:#fff;
   opacity:0; visibility:hidden; transform:translateY(10px);
   transition:all .3s ease;
+  box-shadow:0 4px 12px rgba(249,115,22,0.3);
 }
 #back-to-top.show{ opacity:1; visibility:visible; transform:translateY(0); }
 
