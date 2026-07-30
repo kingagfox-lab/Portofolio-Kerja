@@ -44,7 +44,6 @@ body{
   color:var(--text);
   font-family:var(--font-display);
   line-height:1.6;
-  /* Mencegah layar bisa digeser ke kanan jika ada elemen yang menjebol */
   overflow-x:hidden;
   width: 100%;
   position:relative;
@@ -90,7 +89,25 @@ img{ max-width:100%; height:auto; display:block; }
 }
 
 .section{ position:relative; padding:6.5rem 0; }
-@media (max-width:767px){ .section{ padding:4.5rem 0; } }
+@media (max-width:767px){ 
+  .section{ padding:4.5rem 0; }
+  
+  /* Pusat dan perbesar judul & filter khusus mobile */
+  .section-head {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .section-title {
+    font-size: clamp(2.2rem, 7vw, 2.8rem);
+  }
+  .section-sub {
+    font-size: 1.05rem;
+  }
+  .filter-row, .skills-tabs {
+    justify-content: center;
+  }
+}
+
 @media (max-width:380px){
   .container{ padding-inline:1.1rem; }
   .btn{ padding:.8rem 1.3rem; font-size:.85rem; }
@@ -104,7 +121,7 @@ img{ max-width:100%; height:auto; display:block; }
   font-weight:700;
   letter-spacing:-0.02em;
   line-height:1.15;
-  overflow-wrap: break-word; /* Mencegah teks menjebol layar */
+  overflow-wrap: break-word;
 }
 .section-title .accent{
   background:var(--grad-primary);
@@ -299,12 +316,10 @@ img{ max-width:100%; height:auto; display:block; }
   font-family:var(--font-mono); color:var(--purple-soft); font-size:.95rem; margin-bottom:1.1rem;
 }
 .hero-name{
-  /* FIXED: Ukuran font minimum dikecilkan jadi 1.8rem agar muat di HP kecil */
   font-size:clamp(1.8rem, 8vw, 4.4rem);
   font-weight:700; 
   line-height:1.1; 
   letter-spacing:-.03em;
-  /* FIXED: Memaksa teks turun baris jika kepanjangan */
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -313,7 +328,6 @@ img{ max-width:100%; height:auto; display:block; }
 }
 .hero-role{
   font-family:var(--font-mono);
-  /* FIXED: Ukuran font minimum dikecilkan jadi 0.9rem */
   font-size:clamp(0.9rem, 3vw, 1.35rem);
   color:var(--muted);
   margin-top:1.1rem;
@@ -398,7 +412,6 @@ img{ max-width:100%; height:auto; display:block; }
   position:sticky; top:7rem;
 }
 
-/* FIXED: Mematikan Sticky di Layar Mobile agar teks tidak tumpang tindih */
 @media (max-width:900px){ 
   .about-grid{ grid-template-columns:1fr; gap:2.5rem; } 
   .about-photo {
