@@ -1,0 +1,22 @@
+<!--
+  Reference-only partial.
+  This markup is duplicated directly inside every page's <header> so the
+  site works when opened straight from the file system (file://), where
+  browsers block fetch()/XHR of local files. Keep this file in sync if you
+  redesign the navbar, then copy the change into each page.
+-->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="lg-bracket">&lt;</span>Agung<span class="lg-bracket">/&gt;</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html#experience">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Hire Me</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
